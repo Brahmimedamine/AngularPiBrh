@@ -1,0 +1,26 @@
+<div class="row">
+    <div *ngFor="let item of etablissements" class="col-md-4 mb-3">
+      <div class="custom-block custom-block-full">
+  
+        <div class="custom-block-image-wrap">
+          <a (click)="buttonDetail(item.idEtab)">
+            <img [src]="item.image" class="custom-block-image img-fluid" alt="">
+          </a>
+        </div>
+  
+        <div class="custom-block-info">
+          <h5 class="mb-2">
+            <a>{{ item.nomEtab }}</a>
+          </h5>
+          <p class="mb-0">{{ item.adresse }}</p>
+  
+          <div class="custom-block-bottom d-flex justify-content-between mt-3">
+            <a class="bi-phone me-1">
+              <span>{{ item.numFixe }}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
